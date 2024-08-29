@@ -1,0 +1,40 @@
+﻿namespace Pathfinder2E
+{
+    public enum Background
+    {
+        Acolyte,
+        Acrobat,
+        Animal_Whisperer,
+        Artisan,
+        Artist,
+        Barkeep,
+        Barrister,
+        Bounty_Hunter,
+        Charlatan,
+        Criminal,
+        Detective,
+        Emissary,
+        Entertainer,
+        Farmhand,
+        Field_Medic,
+        Fortune_Teller,
+        Gambler,
+        Gladiator,
+        Guard,
+        Herbalist,
+        Hermit,
+        Hunter,
+        Laborer,
+        Martial_Disciple,
+        Merchant,
+        Miner,
+        Noble,
+        Nomad,
+        Prisoner,
+        Sailor,
+        Scholar,
+        Street_Urchin,
+        Tinker,
+        Warrior
+    }
+}
