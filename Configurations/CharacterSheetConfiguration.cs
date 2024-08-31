@@ -18,6 +18,7 @@ namespace Pathfinder2E.Configurations
                       maxHP = 15,
                       ancestry = Ancestry.Elf,
                       background = Background.Nomad,
+                      alignment = Alignment.LawfulGood,
                       characterClass = Class.Ranger,
                       
                   },
@@ -31,6 +32,7 @@ namespace Pathfinder2E.Configurations
                       maxHP = 22,
                       ancestry = Ancestry.Human,
                       background = Background.Laborer,
+                      alignment = Alignment.ChaoticNeutral,
                       characterClass = Class.Barbarian,
                   },
                   new CharacterSheet
@@ -43,6 +45,7 @@ namespace Pathfinder2E.Configurations
                       maxHP = 14,
                       ancestry = Ancestry.Human,
                       background = Background.Emissary,
+                      alignment = Alignment.NeutralGood,
                       characterClass = Class.Wizard,
                   }
               );

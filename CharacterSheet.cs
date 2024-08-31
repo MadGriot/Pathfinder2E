@@ -13,6 +13,7 @@ namespace Pathfinder2E
         public Background background { get; set; }
         public AbilityScore abilityScore { get; set; }
         public Class characterClass { get; set; }
+        public Alignment alignment { get; set; }
         public ICollection<Feat>? Feats { get; set; }
         public ICollection<Item>? Items { get; set; }
 
