@@ -7,6 +7,8 @@ namespace Pathfinder2E
         private int characterId;
         public string firstName { get; set; }
         public string lastName { get; set; }
+        public int currentHP { get; set; }
+        public int maxHP { get; set; }
         public int strength { get; set; }
         public int strength_modifier { get; set; }
         public int dexterity { get; set; }
@@ -23,6 +25,9 @@ namespace Pathfinder2E
         public Ancestry ancestry { get; }
         public Class characterClass { get; }
         public Alignment alignment { get; set; }
+        public bool inEncounter { get; set; } = false;
+        public bool turn { get; set; } = false;
+        public int actions { get; set; } = 3;
 
 
 
@@ -37,6 +42,8 @@ namespace Pathfinder2E
 
             firstName = character.firstName;
             lastName = character.lastName;
+            currentHP = character.currentHP;
+            maxHP = character.maxHP;
             strength = abilityScore.strength;
             strength_modifier = Modifier.attribute_modifier(strength);
 
@@ -58,6 +65,16 @@ namespace Pathfinder2E
             ancestry = character.ancestry;
             characterClass = character.characterClass;
             alignment = character.alignment;
+        }
+
+        public event Action? EndTurn;
+        public void consume_action(int points)
+        {
+            actions -= points;
+            if (actions == 0)
+            {
+                EndTurn.Invoke();
+            }
         }
     }
 }

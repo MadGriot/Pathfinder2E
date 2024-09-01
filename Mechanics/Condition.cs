@@ -1,0 +1,51 @@
+﻿
+
+namespace Pathfinder2E.Mechanics
+{
+    public enum Condition
+    {
+        None,
+        Blinded,
+        Broken,
+        Clumsy,
+        Concealed,
+        Confused,
+        Dazzled,
+        Dead,
+        Deafened,
+        Doomed,
+        Drained,
+        Dying,
+        Encumbered,
+        Enfeebled,
+        Fascinated,
+        Fatigued,
+        Flat_Footed,
+        Fleeing,
+        Friendly,
+        Frightened,
+        Grabbed,
+        Helpful,
+        Hidden,
+        Hostile,
+        Immobilized,
+        Indifferent,
+        Invisible,
+        Observed,
+        Paralyzed,
+        Presistent_Damage,
+        Petrified,
+        Prone,
+        Quickened,
+        Restrained,
+        Sickened,
+        Slowed,
+        Stunned,
+        Stuperfied,
+        Unconscious,
+        Undetected,
+        Unfriendly,
+        Unnoticed,
+        Wounded
+    }
+}
