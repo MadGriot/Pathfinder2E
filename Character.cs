@@ -25,8 +25,8 @@ namespace Pathfinder2E
         public Ancestry ancestry { get; }
         public Class characterClass { get; }
         public Alignment alignment { get; set; }
-        public Dictionary<DamageType, int> resistances { get; set; }
-        public Dictionary<DamageType, int> weaknesess { get; set; }
+        public Dictionary<DamageType, int> resistances { get; set; } = new Dictionary<DamageType, int>();
+        public Dictionary<DamageType, int> weaknesess { get; set; } = new Dictionary<DamageType, int>();
         public bool inEncounter { get; set; } = false;
         public bool turn { get; set; } = false;
         public int actions { get; set; } = 3;
@@ -82,9 +82,9 @@ namespace Pathfinder2E
             {
                 int[] values = character.weaknessValues.ToArray();
                 int i = 0;
-                foreach (var resistance in character.weaknesses)
+                foreach (var weakness in character.weaknesses)
                 {
-                    weaknesess.Add(resistance, values[i]);
+                    weaknesess.Add(weakness, values[i]);
                     i++;
                 }
             }

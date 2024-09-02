@@ -18,10 +18,10 @@ namespace Pathfinder2E
         public Alignment alignment { get; set; }
         public ICollection<Feat>? Feats { get; set; }
         public ICollection<Item>? Items { get; set; }
-        public ISet<DamageType>? weaknesses { get; set; }
-        public ICollection<int>? weaknessValues{ get; set; }
-        public ISet<DamageType>? resistances { get; set; }
-        public ICollection<int>? resistanceValues { get; set; }
+        public List<DamageType>? weaknesses { get; set; }
+        public List<int>? weaknessValues{ get; set; }
+        public List<DamageType>? resistances { get; set; }
+        public List<int>? resistanceValues { get; set; }
 
     }
 }

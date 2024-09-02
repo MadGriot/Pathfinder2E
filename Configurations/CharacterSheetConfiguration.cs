@@ -21,7 +21,7 @@ namespace Pathfinder2E.Configurations
                       background = Background.Nomad,
                       alignment = Alignment.LawfulGood,
                       characterClass = Class.Ranger,
-                      resistances = new HashSet<DamageType>
+                      resistances = new List<DamageType>
                       {
                           DamageType.Poison,
                           DamageType.Bleed,
@@ -45,7 +45,7 @@ namespace Pathfinder2E.Configurations
                       background = Background.Laborer,
                       alignment = Alignment.ChaoticNeutral,
                       characterClass = Class.Barbarian,
-                      weaknesses = new HashSet<DamageType>
+                      weaknesses = new List<DamageType>
                       {
                           DamageType.Mental,
                           DamageType.Poison,
