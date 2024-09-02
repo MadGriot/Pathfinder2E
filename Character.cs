@@ -25,6 +25,8 @@ namespace Pathfinder2E
         public Ancestry ancestry { get; }
         public Class characterClass { get; }
         public Alignment alignment { get; set; }
+        public Dictionary<DamageType, int> resistances { get; set; }
+        public Dictionary<DamageType, int> weaknesess { get; set; }
         public bool inEncounter { get; set; } = false;
         public bool turn { get; set; } = false;
         public int actions { get; set; } = 3;
@@ -65,6 +67,27 @@ namespace Pathfinder2E
             ancestry = character.ancestry;
             characterClass = character.characterClass;
             alignment = character.alignment;
+
+            if (character.resistances != null)
+            {
+                int[] values = character.resistanceValues.ToArray();
+                int i = 0;
+                foreach (var resistance in character.resistances)
+                {
+                    resistances.Add(resistance, values[i]);
+                    i++;
+                }
+            }
+            if (character.weaknesses != null)
+            {
+                int[] values = character.weaknessValues.ToArray();
+                int i = 0;
+                foreach (var resistance in character.weaknesses)
+                {
+                    weaknesess.Add(resistance, values[i]);
+                    i++;
+                }
+            }
         }
 
         public event Action? EndTurn;

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Pathfinder2E.Mechanics;
 
 namespace Pathfinder2E.Configurations
 {
@@ -20,7 +21,17 @@ namespace Pathfinder2E.Configurations
                       background = Background.Nomad,
                       alignment = Alignment.LawfulGood,
                       characterClass = Class.Ranger,
-                      
+                      resistances = new HashSet<DamageType>
+                      {
+                          DamageType.Poison,
+                          DamageType.Bleed,
+                      },
+                      resistanceValues = new List<int>
+                      {
+                          2,
+                          2,
+                      }
+
                   },
                   new CharacterSheet
                   {
@@ -34,6 +45,16 @@ namespace Pathfinder2E.Configurations
                       background = Background.Laborer,
                       alignment = Alignment.ChaoticNeutral,
                       characterClass = Class.Barbarian,
+                      weaknesses = new HashSet<DamageType>
+                      {
+                          DamageType.Mental,
+                          DamageType.Poison,
+                      },
+                      weaknessValues = new List<int>
+                      {
+                          3,
+                          2,
+                      }
                   },
                   new CharacterSheet
                   {

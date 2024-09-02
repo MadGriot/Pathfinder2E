@@ -1,4 +1,6 @@
 ﻿
+using Pathfinder2E.Mechanics;
+
 namespace Pathfinder2E
 {
     public class CharacterSheet
@@ -16,6 +18,10 @@ namespace Pathfinder2E
         public Alignment alignment { get; set; }
         public ICollection<Feat>? Feats { get; set; }
         public ICollection<Item>? Items { get; set; }
+        public ISet<DamageType>? weaknesses { get; set; }
+        public ICollection<int>? weaknessValues{ get; set; }
+        public ISet<DamageType>? resistances { get; set; }
+        public ICollection<int>? resistanceValues { get; set; }
 
     }
 }
