@@ -41,6 +41,17 @@ namespace Pathfinder2E.Configurations
                     wisdom = 10,
                     intelligence = 10,
                     charisma = 10,
+                },
+                new AbilityScore
+                {
+                    AbilityScoreId = 4,
+                    CharacterSheetId = 4,
+                    strength = 10,
+                    constitution = 10,
+                    dexterity = 10,
+                    wisdom = 10,
+                    intelligence = 10,
+                    charisma = 10,
                 }
             );
         }

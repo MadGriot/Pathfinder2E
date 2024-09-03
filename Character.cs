@@ -22,14 +22,18 @@ namespace Pathfinder2E
         public int wisdom_modifier { get; set; }
         public int charisma { get; set; }
         public int charisma_modifier { get; set; }
-        public Ancestry ancestry { get; }
-        public Class characterClass { get; }
+        public Ancestry ancestry { get; set; }
+        public Class characterClass { get; set; }
         public Alignment alignment { get; set; }
+        public int speed { get; set; }
+        public int currentXP { get; set; }
+        public int remainingXP { get; set; }
         public Dictionary<DamageType, int> resistances { get; set; } = new Dictionary<DamageType, int>();
         public Dictionary<DamageType, int> weaknesess { get; set; } = new Dictionary<DamageType, int>();
         public bool inEncounter { get; set; } = false;
         public bool turn { get; set; } = false;
         public int actions { get; set; } = 3;
+        public int freeBoosts { get; set; }
 
 
 
@@ -67,6 +71,9 @@ namespace Pathfinder2E
             ancestry = character.ancestry;
             characterClass = character.characterClass;
             alignment = character.alignment;
+            speed = character.speed;
+            currentXP = character.XP;
+            remainingXP = 1000 - currentXP;
 
             if (character.resistances != null)
             {

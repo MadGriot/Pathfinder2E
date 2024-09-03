@@ -16,6 +16,8 @@ namespace Pathfinder2E
         public AbilityScore abilityScore { get; set; }
         public Class characterClass { get; set; }
         public Alignment alignment { get; set; }
+        public int XP { get; set; }
+        public int speed { get; set; }
         public ICollection<Feat>? Feats { get; set; }
         public ICollection<Item>? Items { get; set; }
         public List<DamageType>? weaknesses { get; set; }

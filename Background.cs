@@ -30,6 +30,7 @@
         Miner,
         Noble,
         Nomad,
+        None,
         Prisoner,
         Sailor,
         Scholar,

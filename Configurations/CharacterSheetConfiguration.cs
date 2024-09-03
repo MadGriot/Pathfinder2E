@@ -21,6 +21,8 @@ namespace Pathfinder2E.Configurations
                       background = Background.Nomad,
                       alignment = Alignment.LawfulGood,
                       characterClass = Class.Ranger,
+                      XP = 0,
+                      speed = 30,
                       resistances = new List<DamageType>
                       {
                           DamageType.Poison,
@@ -45,6 +47,8 @@ namespace Pathfinder2E.Configurations
                       background = Background.Laborer,
                       alignment = Alignment.ChaoticNeutral,
                       characterClass = Class.Barbarian,
+                      XP = 0,
+                      speed = 25,
                       weaknesses = new List<DamageType>
                       {
                           DamageType.Mental,
@@ -68,6 +72,23 @@ namespace Pathfinder2E.Configurations
                       background = Background.Emissary,
                       alignment = Alignment.NeutralGood,
                       characterClass = Class.Wizard,
+                      XP = 0,
+                      speed = 25,
+                  },
+                  new CharacterSheet
+                  {
+                      CharacterSheetId = 4,
+                      level = 1,
+                      firstName = "Unkown",
+                      lastName = "Person",
+                      currentHP = 0,
+                      maxHP = 0,
+                      ancestry = Ancestry.Human,
+                      background = Background.None,
+                      alignment = Alignment.Neutral,
+                      characterClass = Class.Fighter,
+                      XP = 0,
+                      speed = 25,
                   }
               );
         }
