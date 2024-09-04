@@ -23,6 +23,7 @@ namespace Pathfinder2E.Configurations
                       characterClass = Class.Ranger,
                       XP = 0,
                       speed = 30,
+                      size = Size.Medium,
                       resistances = new List<DamageType>
                       {
                           DamageType.Poison,
@@ -49,6 +50,7 @@ namespace Pathfinder2E.Configurations
                       characterClass = Class.Barbarian,
                       XP = 0,
                       speed = 25,
+                      size = Size.Medium,
                       weaknesses = new List<DamageType>
                       {
                           DamageType.Mental,
@@ -72,6 +74,7 @@ namespace Pathfinder2E.Configurations
                       background = Background.Emissary,
                       alignment = Alignment.NeutralGood,
                       characterClass = Class.Wizard,
+                      size = Size.Medium,
                       XP = 0,
                       speed = 25,
                   },
@@ -87,6 +90,7 @@ namespace Pathfinder2E.Configurations
                       background = Background.None,
                       alignment = Alignment.Neutral,
                       characterClass = Class.Fighter,
+                      size = Size.Medium,
                       XP = 0,
                       speed = 25,
                   }

@@ -28,6 +28,7 @@ namespace Pathfinder2E
         public int speed { get; set; }
         public int currentXP { get; set; }
         public int remainingXP { get; set; }
+        public Size size { get; set; }
         public Dictionary<DamageType, int> resistances { get; set; } = new Dictionary<DamageType, int>();
         public Dictionary<DamageType, int> weaknesess { get; set; } = new Dictionary<DamageType, int>();
         public bool inEncounter { get; set; } = false;
@@ -74,6 +75,7 @@ namespace Pathfinder2E
             speed = character.speed;
             currentXP = character.XP;
             remainingXP = 1000 - currentXP;
+            size = character.size;
 
             if (character.resistances != null)
             {
