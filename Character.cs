@@ -29,12 +29,12 @@ namespace Pathfinder2E
         public int currentXP { get; set; }
         public int remainingXP { get; set; }
         public Size size { get; set; }
+        public int freeBoosts { get; set; }
         public Dictionary<DamageType, int> resistances { get; set; } = new Dictionary<DamageType, int>();
         public Dictionary<DamageType, int> weaknesess { get; set; } = new Dictionary<DamageType, int>();
         public bool inEncounter { get; set; } = false;
         public bool turn { get; set; } = false;
         public int actions { get; set; } = 3;
-        public int freeBoosts { get; set; }
 
 
 

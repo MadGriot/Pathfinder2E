@@ -2,6 +2,8 @@
 {
     public static class SetAncestry
     {
+
+
         public static void ResetAbilityScore(Character character)
         {
             character.strength = 10;
@@ -30,6 +32,8 @@
                     character.charisma_modifier = Modifier.attribute_modifier(character.charisma);
                     character.freeBoosts += 1;
                     character.speed = 20;
+                    Limiter.freeBoostsLimit[2] = false;
+                    Limiter.freeBoostsLimit[3] = false;
                     break;
                 case Ancestry.Elf:
                     ResetAbilityScore(character);
@@ -45,6 +49,8 @@
                     character.constitution_modifier = Modifier.attribute_modifier(character.constitution);
                     character.freeBoosts += 1;
                     character.speed = 30;
+                    Limiter.freeBoostsLimit[1] = false;
+                    Limiter.freeBoostsLimit[4] = false;
                     break;
                 case Ancestry.Gnoll:
                     ResetAbilityScore(character);
@@ -60,6 +66,8 @@
                     character.wisdom_modifier = Modifier.attribute_modifier(character.wisdom);
                     character.freeBoosts += 1;
                     character.speed = 25;
+                    Limiter.freeBoostsLimit[0] = false;
+                    Limiter.freeBoostsLimit[4] = false;
                     break;
                 case Ancestry.Gnome:
                     ResetAbilityScore(character);
@@ -75,6 +83,8 @@
                     character.strength_modifier = Modifier.attribute_modifier(character.strength);
                     character.freeBoosts += 1;
                     character.speed = 25;
+                    Limiter.freeBoostsLimit[2] = false;
+                    Limiter.freeBoostsLimit[5] = false;
                     break;
                 case Ancestry.Goblin:
                     ResetAbilityScore(character);
@@ -90,6 +100,8 @@
                     character.wisdom_modifier = Modifier.attribute_modifier(character.wisdom);
                     character.freeBoosts += 1;
                     character.speed = 25;
+                    Limiter.freeBoostsLimit[1] = false;
+                    Limiter.freeBoostsLimit[5] = false;
                     break;
                 case Ancestry.Halfling:
                     ResetAbilityScore(character);
@@ -105,6 +117,8 @@
                     character.wisdom_modifier = Modifier.attribute_modifier(character.wisdom);
                     character.freeBoosts += 1;
                     character.speed = 25;
+                    Limiter.freeBoostsLimit[2] = false;
+                    Limiter.freeBoostsLimit[5] = false;
                     break;
                 case Ancestry.Human:
                     ResetAbilityScore(character);

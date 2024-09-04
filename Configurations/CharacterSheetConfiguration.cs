@@ -24,6 +24,7 @@ namespace Pathfinder2E.Configurations
                       XP = 0,
                       speed = 30,
                       size = Size.Medium,
+                      freeBoosts = 0,
                       resistances = new List<DamageType>
                       {
                           DamageType.Poison,
@@ -51,6 +52,7 @@ namespace Pathfinder2E.Configurations
                       XP = 0,
                       speed = 25,
                       size = Size.Medium,
+                      freeBoosts = 0,
                       weaknesses = new List<DamageType>
                       {
                           DamageType.Mental,
@@ -77,6 +79,8 @@ namespace Pathfinder2E.Configurations
                       size = Size.Medium,
                       XP = 0,
                       speed = 25,
+                      freeBoosts = 0,
+
                   },
                   new CharacterSheet
                   {
@@ -93,6 +97,8 @@ namespace Pathfinder2E.Configurations
                       size = Size.Medium,
                       XP = 0,
                       speed = 25,
+                      freeBoosts = 0,
+
                   }
               );
         }

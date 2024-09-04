@@ -19,6 +19,7 @@ namespace Pathfinder2E
         public Size size { get; set; }
         public int XP { get; set; }
         public int speed { get; set; }
+        public int freeBoosts { get; set; }
         public ICollection<Feat>? Feats { get; set; }
         public ICollection<Item>? Items { get; set; }
         public List<DamageType>? weaknesses { get; set; }
