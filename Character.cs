@@ -24,6 +24,7 @@ namespace Pathfinder2E
         public int charisma_modifier { get; set; }
         public Ancestry ancestry { get; set; }
         public Class characterClass { get; set; }
+        public Background background { get; set; }
         public Alignment alignment { get; set; }
         public int speed { get; set; }
         public int currentXP { get; set; }

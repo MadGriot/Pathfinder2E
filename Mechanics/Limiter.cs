@@ -8,5 +8,10 @@ namespace Pathfinder2E.Mechanics
 {
             true,true,true,true,true,true
         };
+
+        public static bool[] restrictedBoostsLimit { get; set; } =
+        {
+            false,false,false,false,false,false
+        }
     }
 }
