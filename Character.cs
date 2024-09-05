@@ -22,6 +22,7 @@ namespace Pathfinder2E
         public int wisdom_modifier { get; set; }
         public int charisma { get; set; }
         public int charisma_modifier { get; set; }
+        public Skills skills { get; set; }
         public Ancestry ancestry { get; set; }
         public Class characterClass { get; set; }
         public Background background { get; set; }
@@ -31,6 +32,8 @@ namespace Pathfinder2E
         public int remainingXP { get; set; }
         public Size size { get; set; }
         public int freeBoosts { get; set; }
+        public int restrictedBoosts { get; set; }
+        public List<Language> languages { get; set; } = new List<Language>();
         public Dictionary<DamageType, int> resistances { get; set; } = new Dictionary<DamageType, int>();
         public Dictionary<DamageType, int> weaknesess { get; set; } = new Dictionary<DamageType, int>();
         public bool inEncounter { get; set; } = false;
@@ -47,6 +50,8 @@ namespace Pathfinder2E
                 .First(x => x.CharacterSheetId == characterId);
             AbilityScore abilityScore = context.AbilityScores
                 .First(x => x.AbilityScoreId == characterId);
+            skills = context.Skills
+                .First(x => x.SkillsId == characterId);
 
             firstName = character.firstName;
             lastName = character.lastName;
@@ -98,7 +103,14 @@ namespace Pathfinder2E
                     i++;
                 }
             }
-        }
+            if (character.languages != null)
+            {
+                foreach (Language language in character.languages)
+                {
+                    languages.Add(language);
+                }
+            }
+            }
 
         public event Action? EndTurn;
         public void consume_action(int points)

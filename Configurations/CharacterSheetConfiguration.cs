@@ -25,6 +25,11 @@ namespace Pathfinder2E.Configurations
                       speed = 30,
                       size = Size.Medium,
                       freeBoosts = 0,
+                      languages = new List<Language>
+                      {
+                          Language.Mwangi,
+                          Language.Taldane,
+                      },
                       resistances = new List<DamageType>
                       {
                           DamageType.Poison,
@@ -53,6 +58,11 @@ namespace Pathfinder2E.Configurations
                       speed = 25,
                       size = Size.Medium,
                       freeBoosts = 0,
+                      languages = new List<Language>
+                      {
+                          Language.Mwangi,
+                          Language.Taldane,
+                      },
                       weaknesses = new List<DamageType>
                       {
                           DamageType.Mental,
@@ -80,6 +90,11 @@ namespace Pathfinder2E.Configurations
                       XP = 0,
                       speed = 25,
                       freeBoosts = 0,
+                      languages = new List<Language>
+                      {
+                          Language.Mwangi,
+                          Language.Taldane,
+                      },
 
                   },
                   new CharacterSheet
@@ -98,6 +113,10 @@ namespace Pathfinder2E.Configurations
                       XP = 0,
                       speed = 25,
                       freeBoosts = 0,
+                      languages = new List<Language>
+                      {
+                          Language.Mwangi,
+                      },
 
                   }
               );

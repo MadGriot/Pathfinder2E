@@ -34,6 +34,7 @@
         Prisoner,
         Sailor,
         Scholar,
+        Scout,
         Street_Urchin,
         Tinker,
         Warrior

@@ -14,13 +14,14 @@ namespace Pathfinder2E
         public Ancestry ancestry { get; set; }
         public Background background { get; set; }
         public AbilityScore abilityScore { get; set; }
+        public Skills skills { get; set; }
         public Class characterClass { get; set; }
-        public Background background { get; set; }
         public Alignment alignment { get; set; }
         public Size size { get; set; }
         public int XP { get; set; }
         public int speed { get; set; }
         public int freeBoosts { get; set; }
+        public List<Language> languages { get; set; }
         public ICollection<Feat>? Feats { get; set; }
         public ICollection<Item>? Items { get; set; }
         public List<DamageType>? weaknesses { get; set; }

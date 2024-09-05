@@ -3,6 +3,8 @@
     public class Skills
     {
         public int SkillsId { get; set; }
+        public int CharacterSheetId { get; set; }
+        public CharacterSheet characterSheet { get; set; }
         public int Acrobatics { get; set; }
         public int Arcana { get; set; }
         public int Athletics { get; set; }
@@ -10,7 +12,6 @@
         public int Deception { get; set; }
         public int Diplomacy { get; set; }
         public int Intimidation { get; set; }
-        public int Lore { get; set; }
         public int Medicine { get; set; }
         public int Nature { get; set; }
         public int Occultism { get; set; }
