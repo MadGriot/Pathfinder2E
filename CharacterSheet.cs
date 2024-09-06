@@ -15,6 +15,8 @@ namespace Pathfinder2E
         public Background background { get; set; }
         public AbilityScore abilityScore { get; set; }
         public Skills skills { get; set; }
+        public Proficiencies proficiencies { get; set; }
+        public ClassDCs classDCs { get; set; }
         public Class characterClass { get; set; }
         public Alignment alignment { get; set; }
         public Size size { get; set; }

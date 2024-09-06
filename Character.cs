@@ -23,6 +23,8 @@ namespace Pathfinder2E
         public int charisma { get; set; }
         public int charisma_modifier { get; set; }
         public Skills skills { get; set; }
+        public Proficiencies proficiencies { get; set; }
+        public ClassDCs classDCs { get; set; }
         public Ancestry ancestry { get; set; }
         public Class characterClass { get; set; }
         public Background background { get; set; }
@@ -52,6 +54,8 @@ namespace Pathfinder2E
                 .First(x => x.AbilityScoreId == characterId);
             skills = context.Skills
                 .First(x => x.SkillsId == characterId);
+            proficiencies = character.proficiencies;
+            classDCs = character.classDCs;
 
             firstName = character.firstName;
             lastName = character.lastName;

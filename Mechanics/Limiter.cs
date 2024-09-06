@@ -31,6 +31,7 @@ namespace Pathfinder2E.Mechanics
 
         public static void resetSkillValues(Skills skills)
         {
+            //fix this
 
             skills.Acrobatics = 0;
             skills.Arcana = 0;
@@ -49,5 +50,6 @@ namespace Pathfinder2E.Mechanics
             skills.Survival = 0;
             skills.Theivery = 0;
         }
+
     }
 }
