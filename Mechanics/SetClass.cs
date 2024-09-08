@@ -107,9 +107,32 @@ namespace Pathfinder2E.Mechanics
                         Divine_Spell_DC= 1,
                     };
                     break;
+                case Class.Druid:
+                    character.maxHP = 8 + character.constitution_modifier;
+                    character.currentHP = character.maxHP;
+                    character.wisdom += 2;
+                    character.proficiencies = new Proficiencies
+                    {
+                        Perception = 1,
+                        Fortitude = 1,
+                        Reflex = 1,
+                        Will = 2,
+                        Simple_Weapons = 1,
+                        Unarmed_Attacks = 1,
+                        Light_Armor = 1,
+                        Medium_Armor = 1,
+                        Unarmored_Defence = 1,
+                        Primal_Spell_Attacks = 1,
+                        Primal_Spell_DCs = 1,
+                    };
+                    break;
                 case Class.Fighter:
                     character.maxHP = 10 + character.constitution_modifier;
                     character.currentHP = character.maxHP;
+                    character.freeBoosts += 1;
+                    Limiter.restrictedBoostReset();
+                    Limiter.restrictedBoostsLimit[0] = true;
+                    Limiter.restrictedBoostsLimit[1] = false;
                     character.proficiencies = new Proficiencies
                     {
                         Perception = 2,
@@ -126,6 +149,25 @@ namespace Pathfinder2E.Mechanics
                         Unarmored_Defence = 1,
                     };
                     character.classDCs = new ClassDCs { Fighter = 1 };
+                    break;
+                case Class.Monk:
+                    character.maxHP = 10 + character.constitution_modifier;
+                    character.currentHP = character.maxHP;
+                    character.freeBoosts += 1;
+                    Limiter.restrictedBoostReset();
+                    Limiter.restrictedBoostsLimit[0] = true;
+                    Limiter.restrictedBoostsLimit[1] = false;
+                    character.proficiencies = new Proficiencies
+                    {
+                        Perception = 1,
+                        Fortitude = 2,
+                        Reflex = 2,
+                        Will = 2,
+                        Simple_Weapons = 1,
+                        Unarmed_Attacks = 1,
+                        Unarmored_Defence = 2,
+                    };
+                    character.classDCs = new ClassDCs { Monk = 1 };
                     break;
             }
         }

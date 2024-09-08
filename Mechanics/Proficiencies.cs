@@ -19,6 +19,8 @@ namespace Pathfinder2E.Mechanics
         public int Occult_Spell_DCs { get; set; }
         public int Occult_Spell_Attacks { get; set; }
         public int Perception { get; set; }
+        public int Primal_Spell_DCs { get; set; }
+        public int Primal_Spell_Attacks { get; set; }
         public int Rapier { get; set; }
         public int Reflex { get; set; }
         public int Sap { get; set; }
