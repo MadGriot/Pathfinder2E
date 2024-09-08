@@ -69,7 +69,7 @@ namespace Pathfinder2E.Mechanics
                     character.freeBoosts += 1;
                     Limiter.restrictedBoostReset();
                     Limiter.restrictedBoostsLimit[0] = true;
-                    Limiter.restrictedBoostsLimit[1] = false;
+                    Limiter.restrictedBoostsLimit[1] = true;
                     character.proficiencies = new Proficiencies
                     {
                         Perception = 1,
@@ -132,7 +132,7 @@ namespace Pathfinder2E.Mechanics
                     character.freeBoosts += 1;
                     Limiter.restrictedBoostReset();
                     Limiter.restrictedBoostsLimit[0] = true;
-                    Limiter.restrictedBoostsLimit[1] = false;
+                    Limiter.restrictedBoostsLimit[1] = true;
                     character.proficiencies = new Proficiencies
                     {
                         Perception = 2,
@@ -156,7 +156,7 @@ namespace Pathfinder2E.Mechanics
                     character.freeBoosts += 1;
                     Limiter.restrictedBoostReset();
                     Limiter.restrictedBoostsLimit[0] = true;
-                    Limiter.restrictedBoostsLimit[1] = false;
+                    Limiter.restrictedBoostsLimit[1] = true;
                     character.proficiencies = new Proficiencies
                     {
                         Perception = 1,
@@ -169,6 +169,51 @@ namespace Pathfinder2E.Mechanics
                     };
                     character.classDCs = new ClassDCs { Monk = 1 };
                     break;
+                case Class.Ranger:
+                    character.maxHP = 10 + character.constitution_modifier;
+                    character.currentHP = character.maxHP;
+                    character.freeBoosts += 1;
+                    Limiter.restrictedBoostReset();
+                    Limiter.restrictedBoostsLimit[0] = true;
+                    Limiter.restrictedBoostsLimit[1] = true;
+                    character.proficiencies = new Proficiencies
+                    {
+                        Perception = 2,
+                        Fortitude = 2,
+                        Reflex = 2,
+                        Will = 1,
+                        Simple_Weapons = 1,
+                        Martial_Weapons = 1,
+                        Unarmed_Attacks = 1,
+                        Light_Armor = 1,
+                        Medium_Armor = 1,
+                        Unarmored_Defence = 1,
+                    };
+                    character.classDCs = new ClassDCs { Ranger = 1 };
+                    break;
+                case Class.Rogue:
+                    character.maxHP = 8 + character.constitution_modifier;
+                    character.currentHP = character.maxHP;
+                    character.freeBoosts += 1;
+                    //code in Rogue racket.
+                    character.proficiencies = new Proficiencies
+                    {
+                        Perception = 2,
+                        Fortitude = 1,
+                        Reflex = 2,
+                        Will = 2,
+                        Simple_Weapons = 1,
+                        Rapier = 1,
+                        Sap = 1,
+                        Shortbow = 1,
+                        Shortsword = 1,
+                        Unarmed_Attacks = 1,
+                        Light_Armor = 1,
+                        Unarmored_Defence = 1,
+                    };
+                    character.classDCs = new ClassDCs { Rogue = 1};
+                    break;
+
             }
         }
     }
