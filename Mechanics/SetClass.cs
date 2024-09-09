@@ -213,7 +213,43 @@ namespace Pathfinder2E.Mechanics
                     };
                     character.classDCs = new ClassDCs { Rogue = 1};
                     break;
-
+                case Class.Sorcerer:
+                    character.maxHP = 6 + character.constitution_modifier;
+                    character.currentHP = character.maxHP;
+                    character.charisma += 2;
+                    character.proficiencies = new Proficiencies
+                    {
+                        Perception = 1,
+                        Fortitude = 1,
+                        Reflex = 1,
+                        Will = 2,
+                        Simple_Weapons = 1,
+                        Unarmed_Attacks = 1,
+                        Unarmored_Defence = 1,
+                        //Code in proficiencies based on boodline.
+                    };
+                    break;
+                case Class.Wizard:
+                    character.maxHP = 6 + character.constitution_modifier;
+                    character.currentHP = character.maxHP;
+                    character.intelligence += 2;
+                    character.proficiencies = new Proficiencies
+                    {
+                        Perception = 1,
+                        Fortitude = 1,
+                        Reflex = 1,
+                        Will = 2,
+                        Club = 1,
+                        Crossbow = 1,
+                        Dagger = 1,
+                        Heavy_Crossbow = 1,
+                        Staff = 1,
+                        Unarmed_Attacks = 1,
+                        Unarmored_Defence = 1,
+                        Arcane_Spell_Attacks = 1,
+                        Arcane_Spell_DC = 1,
+                    };
+                    break;
             }
         }
     }
