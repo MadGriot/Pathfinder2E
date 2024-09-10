@@ -1,20 +1,8 @@
-﻿
-
-namespace Pathfinder2E.Mechanics.Actions
+﻿namespace Pathfinder2E.Mechanics.Actions
 {
-    public class SenseMotive : IAction
+    public class SenseMotive : MyAction
     {
-        public int Id => 14;
-
-        public string Name => "Sense Motive";
-        public string? Description { get => throw new NotImplementedException(); }
-        public List<ActionType> traits => new List<ActionType>()
-        {
-            ActionType.Concentrate,
-            ActionType.Secret,
-        };
-
-        public void Action(Character character)
+        public override void Action(Character character)
         {
             throw new NotImplementedException();
         }

@@ -1,18 +1,14 @@
 ﻿namespace Pathfinder2E.Mechanics.Actions
 {
-    public class Stride : IAction
+    public class Stride : MyAction
     {
-        public int Id => 17;
-
-        public string Name => "Stride";
-        public string? Description { get => throw new NotImplementedException(); }
-
-        List<ActionType> IAction.traits => new List<ActionType>()
+        
+        public Stride()
         {
-            ActionType.Move,
-        };
-
-        public void Action(Character character)
+            MyActionId = 1;
+            Name = "Stride";
+        }
+        public override void Action(Character character)
         {
             throw new NotImplementedException();
         }

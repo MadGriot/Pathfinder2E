@@ -41,11 +41,6 @@ namespace Pathfinder2E.Configurations
                           2,
                           2,
                       },
-                      actions = new List<IAction>
-                      {
-                          new Stride(),
-                          new Strike(),
-                      }
 
                   },
                   new CharacterSheet
@@ -79,11 +74,6 @@ namespace Pathfinder2E.Configurations
                           3,
                           2,
                       },
-                      actions = new List<IAction>
-                      {
-                          new Stride(),
-                          new Strike(),
-                      }
                   },
                   new CharacterSheet
                   {

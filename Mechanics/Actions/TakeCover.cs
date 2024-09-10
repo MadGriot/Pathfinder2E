@@ -3,15 +3,9 @@
 
 namespace Pathfinder2E.Mechanics.Actions
 {
-    public class TakeCover : IAction
+    public class TakeCover : MyAction
     {
-        public int Id => 19;
-
-        public string Name => "Take Cover";
-        public string? Description { get => throw new NotImplementedException(); }
-        public List<ActionType> traits => new List<ActionType>();
-
-        public void Action(Character character)
+        public override void Action(Character character)
         {
             throw new NotImplementedException();
         }
