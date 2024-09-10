@@ -12,6 +12,7 @@ namespace Pathfinder2E
         Goblin,
         Halfling,
         Jotun,
+        Kibwani,
         Orcish,
         Sylvan,
         Undercommon,

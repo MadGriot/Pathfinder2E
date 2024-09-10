@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Pathfinder2E.Mechanics;
+using Pathfinder2E.Mechanics.Actions;
 
 namespace Pathfinder2E.Configurations
 {
@@ -39,6 +40,11 @@ namespace Pathfinder2E.Configurations
                       {
                           2,
                           2,
+                      },
+                      actions = new List<IAction>
+                      {
+                          new Stride(),
+                          new Strike(),
                       }
 
                   },
@@ -72,6 +78,11 @@ namespace Pathfinder2E.Configurations
                       {
                           3,
                           2,
+                      },
+                      actions = new List<IAction>
+                      {
+                          new Stride(),
+                          new Strike(),
                       }
                   },
                   new CharacterSheet

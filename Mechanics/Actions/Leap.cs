@@ -2,6 +2,10 @@
 {
     public class Leap : IAction
     {
+        public int Id => 8;
+
+        public string Name => "Leap";
+        public string? Description { get => throw new NotImplementedException(); }
         public List<ActionType> traits => new List<ActionType>()
         {
             ActionType.Move,

@@ -1,17 +1,21 @@
 ﻿
 
-namespace Pathfinder2E.Mechanics.Actions
-{
-    public class SenseMotive : IAction
-    {
-        public int Id => 14;
+using Pathfinder2E.Mechanics.Actions;
 
-        public string Name => "Sense Motive";
+namespace Pathfinder2E.Mechanics.Barbarian
+{
+    public class Rage : IAction
+    {
+        public int Id => 22;
+
+        public string Name => "Rage";
         public string? Description { get => throw new NotImplementedException(); }
         public List<ActionType> traits => new List<ActionType>()
         {
+            ActionType.Barbarian,
             ActionType.Concentrate,
-            ActionType.Secret,
+            ActionType.Emotion,
+            ActionType.Mental,
         };
 
         public void Action(Character character)

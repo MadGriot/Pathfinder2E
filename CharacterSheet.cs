@@ -1,5 +1,6 @@
 ﻿
 using Pathfinder2E.Mechanics;
+using Pathfinder2E.Mechanics.Actions;
 
 namespace Pathfinder2E
 {
@@ -26,6 +27,7 @@ namespace Pathfinder2E
         public List<Language> languages { get; set; }
         public ICollection<Feat>? Feats { get; set; }
         public ICollection<Item>? Items { get; set; }
+        public List<IAction>? actions { get; set; }
         public List<DamageType>? weaknesses { get; set; }
         public List<int>? weaknessValues{ get; set; }
         public List<DamageType>? resistances { get; set; }

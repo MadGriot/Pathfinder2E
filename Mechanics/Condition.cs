@@ -37,6 +37,7 @@ namespace Pathfinder2E.Mechanics
         Petrified,
         Prone,
         Quickened,
+        Raging,
         Restrained,
         Sickened,
         Slowed,

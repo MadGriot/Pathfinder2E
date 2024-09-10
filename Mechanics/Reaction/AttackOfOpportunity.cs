@@ -1,13 +1,13 @@
-﻿
+﻿using Pathfinder2E.Mechanics.Actions;
 
 
-namespace Pathfinder2E.Mechanics.Actions
+namespace Pathfinder2E.Mechanics.Reaction
 {
-    public class TakeCover : IAction
+    public class AttackOfOpportunity : IAction
     {
-        public int Id => 19;
+        public int Id => 22;
 
-        public string Name => "Take Cover";
+        public string Name => "Attack Of Opportunity";
         public string? Description { get => throw new NotImplementedException(); }
         public List<ActionType> traits => new List<ActionType>();
 
