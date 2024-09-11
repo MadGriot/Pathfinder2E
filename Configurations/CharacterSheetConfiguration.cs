@@ -41,7 +41,6 @@ namespace Pathfinder2E.Configurations
                           2,
                           2,
                       },
-
                   },
                   new CharacterSheet
                   {

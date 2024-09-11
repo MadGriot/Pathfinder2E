@@ -1,15 +1,15 @@
 ﻿namespace Pathfinder2E.Mechanics.Actions
 {
-    public class MyAction
+    public abstract class MyAction
     {
         public int MyActionId { get; set; }
         public string Name { get; set; }
         public string? Description { get; set; }
         public int CharacterSheetId { get; set; }
         public CharacterSheet characterSheet { get; set; }
-        public List<ActionType> traits { get; }
+        public List<ActionType> traits { get; set; }
 
-        public virtual void Action(Character character) { }
+        public abstract void Action(Character character);
 
     }
 }
