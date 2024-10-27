@@ -10,7 +10,7 @@ namespace Pathfinder2E
         public DbSet<CharacterSheet> CharacterSheets { get; set; }
         public DbSet<AbilityScore> AbilityScores { get; set; }
         public DbSet<Skills> Skills { get; set; }
-        public DbSet<MyAction> MyActions { get; set; }
+        //public DbSet<MyAction> MyActions { get; set; }
         //public DbSet<Feat> Feats { get; set; }
         //public DbSet<Item> Items { get; set; }
         public string DbPath { get; private set; }
