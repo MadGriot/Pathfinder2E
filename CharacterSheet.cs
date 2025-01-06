@@ -45,7 +45,7 @@ namespace Pathfinder2E
         {
             CharacterSheetDbContext context = new CharacterSheetDbContext();
             CharacterId = characterId;
-            CharacterSheetModel character = context.CharacterSheets
+            CharacterSheetModel character = context.CharacterSheetModels
                 .First(x => x.CharacterSheetId == characterId);
             AbilityScore abilityScore = context.AbilityScores
                 .First(x => x.AbilityScoreId == characterId);
@@ -111,7 +111,7 @@ namespace Pathfinder2E
                     Languages.Add(language);
                 }
             }
-            }
+         }
 
     }
 }

@@ -8,7 +8,7 @@
             MyActionId = 1;
             Name = "Stride";
         }
-        public override void Action(Character character)
+        public override void Action(CharacterSheet character)
         {
             throw new NotImplementedException();
         }

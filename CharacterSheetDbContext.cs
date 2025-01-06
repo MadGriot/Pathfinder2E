@@ -7,7 +7,7 @@ namespace Pathfinder2E
 {
     public class CharacterSheetDbContext : DbContext
     {
-        public DbSet<CharacterSheetModel> CharacterSheets { get; set; }
+        public DbSet<CharacterSheetModel> CharacterSheetModels { get; set; }
         public DbSet<AbilityScore> AbilityScores { get; set; }
         public DbSet<Skills> Skills { get; set; }
         //public DbSet<MyAction> MyActions { get; set; }

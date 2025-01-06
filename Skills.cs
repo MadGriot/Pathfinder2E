@@ -4,7 +4,7 @@
     {
         public int SkillsId { get; set; }
         public int CharacterSheetId { get; set; }
-        public CharacterSheetModel characterSheet { get; set; }
+        public CharacterSheetModel CharacterSheetModel { get; set; }
         public int Acrobatics { get; set; }
         public int Arcana { get; set; }
         public int Athletics { get; set; }

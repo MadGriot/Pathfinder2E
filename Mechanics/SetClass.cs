@@ -4,15 +4,15 @@ namespace Pathfinder2E.Mechanics
 {
     public static class SetClass
     {
-        public static void Set(Character character, Class @class)
+        public static void Set(CharacterSheet character, Class @class)
         {
             switch(@class)
             {
                 case Class.Alchemist:
-                    character.maxHP = 8 + character.constitution_modifier;
-                    character.currentHP = character.maxHP;
-                    character.intelligence += 2;
-                    character.proficiencies = new Proficiencies
+                    character.MaxHP = 8 + character.ConstitutionModifier;
+                    character.CurrentHP = character.MaxHP;
+                    character.Intelligence += 2;
+                    character.Proficiencies = new Proficiencies
                     {
                         Perception = 1,
                         Fortitude = 2,
@@ -25,13 +25,13 @@ namespace Pathfinder2E.Mechanics
                         Medium_Armor = 1,
                         Unarmored_Defence = 1,
                     };
-                    character.classDCs = new ClassDCs { Alchemist = 1 };
+                    character.ClassDCs = new ClassDCs { Alchemist = 1 };
                     break;
                 case Class.Barbarian:
-                    character.maxHP = 12 + character.constitution_modifier;
-                    character.currentHP = character.maxHP;
-                    character.strength += 2;
-                    character.proficiencies = new Proficiencies
+                    character.MaxHP = 12 + character.ConstitutionModifier;
+                    character.CurrentHP = character.MaxHP;
+                    character.Strength += 2;
+                    character.Proficiencies = new Proficiencies
                     {
                         Perception = 2,
                         Fortitude = 2,
@@ -44,13 +44,13 @@ namespace Pathfinder2E.Mechanics
                         Medium_Armor = 1,
                         Unarmored_Defence = 1,
                     };
-                    character.classDCs = new ClassDCs { Barbarian = 1 };
+                    character.ClassDCs = new ClassDCs { Barbarian = 1 };
                     break;
                 case Class.Bard:
-                    character.maxHP = 8 + character.constitution_modifier;
-                    character.currentHP = character.maxHP;
-                    character.charisma += 2;
-                    character.proficiencies = new Proficiencies
+                    character.MaxHP = 8 + character.ConstitutionModifier;
+                    character.CurrentHP = character.MaxHP;
+                    character.Charisma += 2;
+                    character.Proficiencies = new Proficiencies
                     {
                         Perception = 2,
                         Fortitude = 1,
@@ -64,13 +64,13 @@ namespace Pathfinder2E.Mechanics
                     };
                     break;
                 case Class.Champion:
-                    character.maxHP = 10 + character.constitution_modifier;
-                    character.currentHP = character.maxHP;
-                    character.freeBoosts += 1;
+                    character.MaxHP = 10 + character.ConstitutionModifier;
+                    character.CurrentHP = character.MaxHP;
+                    character.FreeBoosts += 1;
                     Limiter.restrictedBoostReset();
                     Limiter.RestrictedBoostsLimit[0] = true;
                     Limiter.RestrictedBoostsLimit[1] = true;
-                    character.proficiencies = new Proficiencies
+                    character.Proficiencies = new Proficiencies
                     {
                         Perception = 1,
                         Fortitude = 2,
@@ -87,13 +87,13 @@ namespace Pathfinder2E.Mechanics
                         Divine_Spell_DC = 1,
                         
                     };
-                    character.classDCs = new ClassDCs { Champion = 1 };
+                    character.ClassDCs = new ClassDCs { Champion = 1 };
                     break;
                 case Class.Cleric:
-                    character.maxHP = 8 + character.constitution_modifier;
-                    character.currentHP = character.maxHP;
-                    character.wisdom += 2;
-                    character.proficiencies = new Proficiencies
+                    character.MaxHP = 8 + character.ConstitutionModifier;
+                    character.CurrentHP = character.MaxHP;
+                    character.Wisdom += 2;
+                    character.Proficiencies = new Proficiencies
                     {
                         Perception = 1,
                         Fortitude = 1,
@@ -108,10 +108,10 @@ namespace Pathfinder2E.Mechanics
                     };
                     break;
                 case Class.Druid:
-                    character.maxHP = 8 + character.constitution_modifier;
-                    character.currentHP = character.maxHP;
-                    character.wisdom += 2;
-                    character.proficiencies = new Proficiencies
+                    character.MaxHP = 8 + character.ConstitutionModifier;
+                    character.CurrentHP = character.MaxHP;
+                    character.Wisdom += 2;
+                    character.Proficiencies = new Proficiencies
                     {
                         Perception = 1,
                         Fortitude = 1,
@@ -127,13 +127,13 @@ namespace Pathfinder2E.Mechanics
                     };
                     break;
                 case Class.Fighter:
-                    character.maxHP = 10 + character.constitution_modifier;
-                    character.currentHP = character.maxHP;
-                    character.freeBoosts += 1;
+                    character.MaxHP = 10 + character.ConstitutionModifier;
+                    character.CurrentHP = character.MaxHP;
+                    character.FreeBoosts += 1;
                     Limiter.restrictedBoostReset();
                     Limiter.RestrictedBoostsLimit[0] = true;
                     Limiter.RestrictedBoostsLimit[1] = true;
-                    character.proficiencies = new Proficiencies
+                    character.Proficiencies = new Proficiencies
                     {
                         Perception = 2,
                         Fortitude = 2,
@@ -148,16 +148,16 @@ namespace Pathfinder2E.Mechanics
                         Heavy_Armor = 1,
                         Unarmored_Defence = 1,
                     };
-                    character.classDCs = new ClassDCs { Fighter = 1 };
+                    character.ClassDCs = new ClassDCs { Fighter = 1 };
                     break;
                 case Class.Monk:
-                    character.maxHP = 10 + character.constitution_modifier;
-                    character.currentHP = character.maxHP;
-                    character.freeBoosts += 1;
+                    character.MaxHP = 10 + character.ConstitutionModifier;
+                    character.CurrentHP = character.MaxHP;
+                    character.FreeBoosts += 1;
                     Limiter.restrictedBoostReset();
                     Limiter.RestrictedBoostsLimit[0] = true;
                     Limiter.RestrictedBoostsLimit[1] = true;
-                    character.proficiencies = new Proficiencies
+                    character.Proficiencies = new Proficiencies
                     {
                         Perception = 1,
                         Fortitude = 2,
@@ -167,16 +167,16 @@ namespace Pathfinder2E.Mechanics
                         Unarmed_Attacks = 1,
                         Unarmored_Defence = 2,
                     };
-                    character.classDCs = new ClassDCs { Monk = 1 };
+                    character.ClassDCs = new ClassDCs { Monk = 1 };
                     break;
                 case Class.Ranger:
-                    character.maxHP = 10 + character.constitution_modifier;
-                    character.currentHP = character.maxHP;
-                    character.freeBoosts += 1;
+                    character.MaxHP = 10 + character.ConstitutionModifier;
+                    character.CurrentHP = character.MaxHP;
+                    character.FreeBoosts += 1;
                     Limiter.restrictedBoostReset();
                     Limiter.RestrictedBoostsLimit[0] = true;
                     Limiter.RestrictedBoostsLimit[1] = true;
-                    character.proficiencies = new Proficiencies
+                    character.Proficiencies = new Proficiencies
                     {
                         Perception = 2,
                         Fortitude = 2,
@@ -189,14 +189,14 @@ namespace Pathfinder2E.Mechanics
                         Medium_Armor = 1,
                         Unarmored_Defence = 1,
                     };
-                    character.classDCs = new ClassDCs { Ranger = 1 };
+                    character.ClassDCs = new ClassDCs { Ranger = 1 };
                     break;
                 case Class.Rogue:
-                    character.maxHP = 8 + character.constitution_modifier;
-                    character.currentHP = character.maxHP;
-                    character.freeBoosts += 1;
+                    character.MaxHP = 8 + character.ConstitutionModifier;
+                    character.CurrentHP = character.MaxHP;
+                    character.FreeBoosts += 1;
                     //code in Rogue racket.
-                    character.proficiencies = new Proficiencies
+                    character.Proficiencies = new Proficiencies
                     {
                         Perception = 2,
                         Fortitude = 1,
@@ -211,13 +211,13 @@ namespace Pathfinder2E.Mechanics
                         Light_Armor = 1,
                         Unarmored_Defence = 1,
                     };
-                    character.classDCs = new ClassDCs { Rogue = 1};
+                    character.ClassDCs = new ClassDCs { Rogue = 1};
                     break;
                 case Class.Sorcerer:
-                    character.maxHP = 6 + character.constitution_modifier;
-                    character.currentHP = character.maxHP;
-                    character.charisma += 2;
-                    character.proficiencies = new Proficiencies
+                    character.MaxHP = 6 + character.ConstitutionModifier;
+                    character.CurrentHP = character.MaxHP;
+                    character.Charisma += 2;
+                    character.Proficiencies = new Proficiencies
                     {
                         Perception = 1,
                         Fortitude = 1,
@@ -226,14 +226,14 @@ namespace Pathfinder2E.Mechanics
                         Simple_Weapons = 1,
                         Unarmed_Attacks = 1,
                         Unarmored_Defence = 1,
-                        //Code in proficiencies based on boodline.
+                        //Code in Proficiencies based on boodline.
                     };
                     break;
                 case Class.Wizard:
-                    character.maxHP = 6 + character.constitution_modifier;
-                    character.currentHP = character.maxHP;
-                    character.intelligence += 2;
-                    character.proficiencies = new Proficiencies
+                    character.MaxHP = 6 + character.ConstitutionModifier;
+                    character.CurrentHP = character.MaxHP;
+                    character.Intelligence += 2;
+                    character.Proficiencies = new Proficiencies
                     {
                         Perception = 1,
                         Fortitude = 1,

@@ -6,7 +6,7 @@ namespace Pathfinder2E.Mechanics.FreeActions
 {
     public class Delay : MyAction
     {
-        public override void Action(Character character)
+        public override void Action(CharacterSheet character)
         {
             throw new NotImplementedException();
         }

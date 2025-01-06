@@ -9,7 +9,7 @@
         public CharacterSheet characterSheet { get; set; }
         public List<ActionType> traits { get; set; }
 
-        public abstract void Action(Character character);
+        public abstract void Action(CharacterSheet character);
 
     }
 }

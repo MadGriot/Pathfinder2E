@@ -2,7 +2,7 @@
 {
     public class Leap : MyAction
     {
-        public override void Action(Character character)
+        public override void Action(CharacterSheet character)
         {
             throw new NotImplementedException();
         }
