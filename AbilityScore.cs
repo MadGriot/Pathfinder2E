@@ -4,12 +4,12 @@
     {
         public int AbilityScoreId { get; set; }
         public int CharacterSheetId { get; set; }
-        public CharacterSheet characterSheet { get; set; }
-        public int strength { get; set; }
-        public int dexterity { get; set; }
-        public int constitution { get; set; }
-        public int intelligence { get; set; }
-        public int wisdom { get; set; }
-        public int charisma { get; set; }
+        public CharacterSheetModel CharacterSheetModel { get; set; }
+        public int Strength { get; set; }
+        public int Dexterity { get; set; }
+        public int Constitution { get; set; }
+        public int Intelligence { get; set; }
+        public int Wisdom { get; set; }
+        public int Charisma { get; set; }
     }
 }

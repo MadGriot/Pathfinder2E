@@ -4,28 +4,28 @@ namespace Pathfinder2E.Mechanics
 {
     public static class Limiter
     {
-        public static bool[] freeBoostsLimit { get; set; } =
+        public static bool[] FreeBoostsLimit { get; set; } =
         {
             true,true,true,true,true,true
         };
 
-        public static bool[] restrictedBoostsLimit { get; set; } =
+        public static bool[] RestrictedBoostsLimit { get; set; } =
         {
             false,false,false,false,false,false
         };
 
         public static void freeBoostReset()
         {
-            for (int i = 0; i < freeBoostsLimit.Length; i++)
+            for (int i = 0; i < FreeBoostsLimit.Length; i++)
             {
-                freeBoostsLimit[i] = true;
+                FreeBoostsLimit[i] = true;
             }
         }
         public static void restrictedBoostReset()
         {
-            for (int i = 0; i < restrictedBoostsLimit.Length; i++)
+            for (int i = 0; i < RestrictedBoostsLimit.Length; i++)
             {
-                restrictedBoostsLimit[i] = false;
+                RestrictedBoostsLimit[i] = false;
             }
         }
 

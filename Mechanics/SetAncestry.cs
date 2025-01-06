@@ -4,139 +4,139 @@
     {
 
 
-        public static void ResetAbilityScore(Character character)
+        public static void ResetAbilityScore(CharacterSheet character)
         {
-            character.strength = 10;
-            character.dexterity = 10;
-            character.constitution = 10;
-            character.wisdom = 10;
-            character.intelligence = 10;
-            character.charisma = 10;
-            character.freeBoosts = 0;
+            character.Strength = 10;
+            character.Dexterity = 10;
+            character.Constitution = 10;
+            character.Wisdom = 10;
+            character.Intelligence = 10;
+            character.Charisma = 10;
+            character.FreeBoosts = 0;
         }
-        public static void Set(Character character, Ancestry ancestry)
+        public static void Set(CharacterSheet character, Ancestry Ancestry)
         {
-            switch (ancestry)
+            switch (Ancestry)
             {
                 case Ancestry.Dwarf:
                     ResetAbilityScore(character);
-                    character.ancestry = Ancestry.Dwarf;
-                    character.currentHP = 10;
-                    character.maxHP = 10;
-                    character.size = Size.Medium;
-                    character.constitution += 2;
-                    character.constitution_modifier = Modifier.attribute_modifier(character.constitution);
-                    character.wisdom += 2;
-                    character.wisdom_modifier = Modifier.attribute_modifier(character.wisdom);
-                    character.charisma -= 2;
-                    character.charisma_modifier = Modifier.attribute_modifier(character.charisma);
-                    character.freeBoosts += 1;
-                    character.speed = 20;
-                    Limiter.freeBoostsLimit[2] = false;
-                    Limiter.freeBoostsLimit[3] = false;
+                    character.Ancestry = Ancestry.Dwarf;
+                    character.CurrentHP = 10;
+                    character.MaxHP = 10;
+                    character.Size = Size.Medium;
+                    character.Constitution += 2;
+                    character.ConstitutionModifier = Modifier.AttributeModifier(character.Constitution);
+                    character.Wisdom += 2;
+                    character.WisdomModifier = Modifier.AttributeModifier(character.Wisdom);
+                    character.Charisma -= 2;
+                    character.CharismaModifier = Modifier.AttributeModifier(character.Charisma);
+                    character.FreeBoosts += 1;
+                    character.Speed = 20;
+                    Limiter.FreeBoostsLimit[2] = false;
+                    Limiter.FreeBoostsLimit[3] = false;
                     break;
                 case Ancestry.Elf:
                     ResetAbilityScore(character);
-                    character.ancestry = Ancestry.Elf;
-                    character.currentHP = 6;
-                    character.maxHP = 6;
-                    character.size = Size.Medium;
-                    character.dexterity += 2;
-                    character.dexterity_modifier = Modifier.attribute_modifier(character.dexterity);
-                    character.intelligence += 2;
-                    character.intelligence_modifier = Modifier.attribute_modifier(character.intelligence);
-                    character.constitution -= 2;
-                    character.constitution_modifier = Modifier.attribute_modifier(character.constitution);
-                    character.freeBoosts += 1;
-                    character.speed = 30;
-                    Limiter.freeBoostsLimit[1] = false;
-                    Limiter.freeBoostsLimit[4] = false;
+                    character.Ancestry = Ancestry.Elf;
+                    character.CurrentHP = 6;
+                    character.MaxHP = 6;
+                    character.Size = Size.Medium;
+                    character.Dexterity += 2;
+                    character.DexterityModifier = Modifier.AttributeModifier(character.Dexterity);
+                    character.Intelligence += 2;
+                    character.IntelligenceModifier = Modifier.AttributeModifier(character.Intelligence);
+                    character.Constitution -= 2;
+                    character.ConstitutionModifier = Modifier.AttributeModifier(character.Constitution);
+                    character.FreeBoosts += 1;
+                    character.Speed = 30;
+                    Limiter.FreeBoostsLimit[1] = false;
+                    Limiter.FreeBoostsLimit[4] = false;
                     break;
                 case Ancestry.Gnoll:
                     ResetAbilityScore(character);
-                    character.ancestry = Ancestry.Gnoll;
-                    character.currentHP = 8;
-                    character.maxHP = 8;
-                    character.size = Size.Medium;
-                    character.strength += 2;
-                    character.strength_modifier = Modifier.attribute_modifier(character.strength_modifier);
-                    character.intelligence += 2;
-                    character.intelligence_modifier = Modifier.attribute_modifier(character.intelligence);
-                    character.wisdom -= 2;
-                    character.wisdom_modifier = Modifier.attribute_modifier(character.wisdom);
-                    character.freeBoosts += 1;
-                    character.speed = 25;
-                    Limiter.freeBoostsLimit[0] = false;
-                    Limiter.freeBoostsLimit[4] = false;
+                    character.Ancestry = Ancestry.Gnoll;
+                    character.CurrentHP = 8;
+                    character.MaxHP = 8;
+                    character.Size = Size.Medium;
+                    character.Strength += 2;
+                    character.StrengthModifier = Modifier.AttributeModifier(character.StrengthModifier);
+                    character.Intelligence += 2;
+                    character.IntelligenceModifier = Modifier.AttributeModifier(character.Intelligence);
+                    character.Wisdom -= 2;
+                    character.WisdomModifier = Modifier.AttributeModifier(character.Wisdom);
+                    character.FreeBoosts += 1;
+                    character.Speed = 25;
+                    Limiter.FreeBoostsLimit[0] = false;
+                    Limiter.FreeBoostsLimit[4] = false;
                     break;
                 case Ancestry.Gnome:
                     ResetAbilityScore(character);
-                    character.ancestry = Ancestry.Gnome;
-                    character.currentHP = 8;
-                    character.maxHP = 8;
-                    character.size = Size.Small;
-                    character.constitution += 2;
-                    character.constitution_modifier = Modifier.attribute_modifier(character.constitution);
-                    character.charisma += 2;
-                    character.charisma_modifier = Modifier.attribute_modifier(character.charisma);
-                    character.strength -= 2;
-                    character.strength_modifier = Modifier.attribute_modifier(character.strength);
-                    character.freeBoosts += 1;
-                    character.speed = 25;
-                    Limiter.freeBoostsLimit[2] = false;
-                    Limiter.freeBoostsLimit[5] = false;
+                    character.Ancestry = Ancestry.Gnome;
+                    character.CurrentHP = 8;
+                    character.MaxHP = 8;
+                    character.Size = Size.Small;
+                    character.Constitution += 2;
+                    character.ConstitutionModifier = Modifier.AttributeModifier(character.Constitution);
+                    character.Charisma += 2;
+                    character.CharismaModifier = Modifier.AttributeModifier(character.Charisma);
+                    character.Strength -= 2;
+                    character.StrengthModifier = Modifier.AttributeModifier(character.Strength);
+                    character.FreeBoosts += 1;
+                    character.Speed = 25;
+                    Limiter.FreeBoostsLimit[2] = false;
+                    Limiter.FreeBoostsLimit[5] = false;
                     break;
                 case Ancestry.Goblin:
                     ResetAbilityScore(character);
-                    character.ancestry = Ancestry.Goblin;
-                    character.currentHP = 6;
-                    character.maxHP = 6;
-                    character.size = Size.Small;
-                    character.dexterity += 2;
-                    character.dexterity_modifier = Modifier.attribute_modifier(character.dexterity);
-                    character.charisma += 2;
-                    character.charisma = Modifier.attribute_modifier(character.charisma);
-                    character.wisdom -= 2;
-                    character.wisdom_modifier = Modifier.attribute_modifier(character.wisdom);
-                    character.freeBoosts += 1;
-                    character.speed = 25;
-                    Limiter.freeBoostsLimit[1] = false;
-                    Limiter.freeBoostsLimit[5] = false;
+                    character.Ancestry = Ancestry.Goblin;
+                    character.CurrentHP = 6;
+                    character.MaxHP = 6;
+                    character.Size = Size.Small;
+                    character.Dexterity += 2;
+                    character.DexterityModifier = Modifier.AttributeModifier(character.Dexterity);
+                    character.Charisma += 2;
+                    character.Charisma = Modifier.AttributeModifier(character.Charisma);
+                    character.Wisdom -= 2;
+                    character.WisdomModifier = Modifier.AttributeModifier(character.Wisdom);
+                    character.FreeBoosts += 1;
+                    character.Speed = 25;
+                    Limiter.FreeBoostsLimit[1] = false;
+                    Limiter.FreeBoostsLimit[5] = false;
                     break;
                 case Ancestry.Halfling:
                     ResetAbilityScore(character);
-                    character.ancestry = Ancestry.Halfling;
-                    character.currentHP = 6;
-                    character.maxHP = 6;
-                    character.size = Size.Small;
-                    character.dexterity += 2;
-                    character.dexterity_modifier = Modifier.attribute_modifier(character.dexterity);
-                    character.charisma += 2;
-                    character.charisma_modifier = Modifier.attribute_modifier(character.charisma);
-                    character.wisdom -= 2;
-                    character.wisdom_modifier = Modifier.attribute_modifier(character.wisdom);
-                    character.freeBoosts += 1;
-                    character.speed = 25;
-                    Limiter.freeBoostsLimit[2] = false;
-                    Limiter.freeBoostsLimit[5] = false;
+                    character.Ancestry = Ancestry.Halfling;
+                    character.CurrentHP = 6;
+                    character.MaxHP = 6;
+                    character.Size = Size.Small;
+                    character.Dexterity += 2;
+                    character.DexterityModifier = Modifier.AttributeModifier(character.Dexterity);
+                    character.Charisma += 2;
+                    character.CharismaModifier = Modifier.AttributeModifier(character.Charisma);
+                    character.Wisdom -= 2;
+                    character.WisdomModifier = Modifier.AttributeModifier(character.Wisdom);
+                    character.FreeBoosts += 1;
+                    character.Speed = 25;
+                    Limiter.FreeBoostsLimit[2] = false;
+                    Limiter.FreeBoostsLimit[5] = false;
                     break;
                 case Ancestry.Human:
                     ResetAbilityScore(character);
-                    character.ancestry = Ancestry.Human;
-                    character.currentHP = 8;
-                    character.maxHP = 8;
-                    character.size = Size.Medium;
-                    character.freeBoosts += 2;
-                    character.speed = 25;
+                    character.Ancestry = Ancestry.Human;
+                    character.CurrentHP = 8;
+                    character.MaxHP = 8;
+                    character.Size = Size.Medium;
+                    character.FreeBoosts += 2;
+                    character.Speed = 25;
                     break;
                 case Ancestry.Orc:
                     ResetAbilityScore(character);
-                    character.ancestry = Ancestry.Human;
-                    character.currentHP = 10;
-                    character.maxHP = 10;
-                    character.size = Size.Medium;
-                    character.freeBoosts += 2;
-                    character.speed = 25;
+                    character.Ancestry = Ancestry.Human;
+                    character.CurrentHP = 10;
+                    character.MaxHP = 10;
+                    character.Size = Size.Medium;
+                    character.FreeBoosts += 2;
+                    character.Speed = 25;
                     break;
 
             }

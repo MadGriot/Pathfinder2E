@@ -5,115 +5,115 @@ using Pathfinder2E.Mechanics.Actions;
 
 namespace Pathfinder2E.Configurations
 {
-    internal class CharacterSheetConfiguration : IEntityTypeConfiguration<CharacterSheet>
+    internal class CharacterSheetConfiguration : IEntityTypeConfiguration<CharacterSheetModel>
     {
-        public void Configure(EntityTypeBuilder<CharacterSheet> builder)
+        public void Configure(EntityTypeBuilder<CharacterSheetModel> builder)
         {
             builder.HasData(
-                  new CharacterSheet
+                  new CharacterSheetModel
                   {
                       CharacterSheetId = 1,
-                      level = 1,
-                      firstName = "Konjit",
-                      lastName = "Munaye",
-                      currentHP = 15,
-                      maxHP = 15,
-                      ancestry = Ancestry.Elf,
-                      background = Background.Nomad,
-                      alignment = Alignment.LawfulGood,
-                      characterClass = Class.Ranger,
+                      Level = 1,
+                      FirstName = "Konjit",
+                      LastName = "Munaye",
+                      CurrentHP = 15,
+                      MaxHP = 15,
+                      Ancestry = Ancestry.Elf,
+                      Background = Background.Nomad,
+                      Alignment = Alignment.LawfulGood,
+                      CharacterClass = Class.Ranger,
                       XP = 0,
-                      speed = 30,
-                      size = Size.Medium,
-                      freeBoosts = 0,
-                      languages = new List<Language>
+                      Speed = 30,
+                      Size = Size.Medium,
+                      FreeBoosts = 0,
+                      Languages = new List<Language>
                       {
                           Language.Mwangi,
                           Language.Taldane,
                       },
-                      resistances = new List<DamageType>
+                      Resistances = new List<DamageType>
                       {
                           DamageType.Poison,
                           DamageType.Bleed,
                       },
-                      resistanceValues = new List<int>
+                      ResistanceValues = new List<int>
                       {
                           2,
                           2,
                       },
                   },
-                  new CharacterSheet
+                  new CharacterSheetModel
                   {
                       CharacterSheetId = 2,
-                      level = 1,
-                      firstName = "Kanandi",
-                      lastName = "Oladoyinbo",
-                      currentHP = 22,
-                      maxHP = 22,
-                      ancestry = Ancestry.Human,
-                      background = Background.Laborer,
-                      alignment = Alignment.ChaoticNeutral,
-                      characterClass = Class.Barbarian,
+                      Level = 1,
+                      FirstName = "Kanandi",
+                      LastName = "Oladoyinbo",
+                      CurrentHP = 22,
+                      MaxHP = 22,
+                      Ancestry = Ancestry.Human,
+                      Background = Background.Laborer,
+                      Alignment = Alignment.ChaoticNeutral,
+                      CharacterClass = Class.Barbarian,
                       XP = 0,
-                      speed = 25,
-                      size = Size.Medium,
-                      freeBoosts = 0,
-                      languages = new List<Language>
+                      Speed = 25,
+                      Size = Size.Medium,
+                      FreeBoosts = 0,
+                      Languages = new List<Language>
                       {
                           Language.Mwangi,
                           Language.Taldane,
                       },
-                      weaknesses = new List<DamageType>
+                      Weaknesses = new List<DamageType>
                       {
                           DamageType.Mental,
                           DamageType.Poison,
                       },
-                      weaknessValues = new List<int>
+                      WeaknessValues = new List<int>
                       {
                           3,
                           2,
                       },
                   },
-                  new CharacterSheet
+                  new CharacterSheetModel
                   {
                       CharacterSheetId = 3,
-                      level = 1,
-                      firstName = "Cris",
-                      lastName = "Marcellus",
-                      currentHP = 14,
-                      maxHP = 14,
-                      ancestry = Ancestry.Human,
-                      background = Background.Emissary,
-                      alignment = Alignment.NeutralGood,
-                      characterClass = Class.Wizard,
-                      size = Size.Medium,
+                      Level = 1,
+                      FirstName = "Cris",
+                      LastName = "Marcellus",
+                      CurrentHP = 14,
+                      MaxHP = 14,
+                      Ancestry = Ancestry.Human,
+                      Background = Background.Emissary,
+                      Alignment = Alignment.NeutralGood,
+                      CharacterClass = Class.Wizard,
+                      Size = Size.Medium,
                       XP = 0,
-                      speed = 25,
-                      freeBoosts = 0,
-                      languages = new List<Language>
+                      Speed = 25,
+                      FreeBoosts = 0,
+                      Languages = new List<Language>
                       {
                           Language.Mwangi,
                           Language.Taldane,
                       },
 
                   },
-                  new CharacterSheet
+                  new CharacterSheetModel
                   {
                       CharacterSheetId = 4,
-                      level = 1,
-                      firstName = "Unkown",
-                      lastName = "Person",
-                      currentHP = 0,
-                      maxHP = 0,
-                      ancestry = Ancestry.Human,
-                      background = Background.None,
-                      alignment = Alignment.Neutral,
-                      characterClass = Class.Fighter,
-                      size = Size.Medium,
+                      Level = 1,
+                      FirstName = "Unkown",
+                      LastName = "Person",
+                      CurrentHP = 0,
+                      MaxHP = 0,
+                      Ancestry = Ancestry.Human,
+                      Background = Background.None,
+                      Alignment = Alignment.Neutral,
+                      CharacterClass = Class.Fighter,
+                      Size = Size.Medium,
                       XP = 0,
-                      speed = 25,
-                      freeBoosts = 0,
-                      languages = new List<Language>
+                      Speed = 25,
+                      FreeBoosts = 0,
+                      Languages = new List<Language>
                       {
                           Language.Mwangi,
                       },

@@ -68,8 +68,8 @@ namespace Pathfinder2E.Mechanics
                     character.currentHP = character.maxHP;
                     character.freeBoosts += 1;
                     Limiter.restrictedBoostReset();
-                    Limiter.restrictedBoostsLimit[0] = true;
-                    Limiter.restrictedBoostsLimit[1] = true;
+                    Limiter.RestrictedBoostsLimit[0] = true;
+                    Limiter.RestrictedBoostsLimit[1] = true;
                     character.proficiencies = new Proficiencies
                     {
                         Perception = 1,
@@ -131,8 +131,8 @@ namespace Pathfinder2E.Mechanics
                     character.currentHP = character.maxHP;
                     character.freeBoosts += 1;
                     Limiter.restrictedBoostReset();
-                    Limiter.restrictedBoostsLimit[0] = true;
-                    Limiter.restrictedBoostsLimit[1] = true;
+                    Limiter.RestrictedBoostsLimit[0] = true;
+                    Limiter.RestrictedBoostsLimit[1] = true;
                     character.proficiencies = new Proficiencies
                     {
                         Perception = 2,
@@ -155,8 +155,8 @@ namespace Pathfinder2E.Mechanics
                     character.currentHP = character.maxHP;
                     character.freeBoosts += 1;
                     Limiter.restrictedBoostReset();
-                    Limiter.restrictedBoostsLimit[0] = true;
-                    Limiter.restrictedBoostsLimit[1] = true;
+                    Limiter.RestrictedBoostsLimit[0] = true;
+                    Limiter.RestrictedBoostsLimit[1] = true;
                     character.proficiencies = new Proficiencies
                     {
                         Perception = 1,
@@ -174,8 +174,8 @@ namespace Pathfinder2E.Mechanics
                     character.currentHP = character.maxHP;
                     character.freeBoosts += 1;
                     Limiter.restrictedBoostReset();
-                    Limiter.restrictedBoostsLimit[0] = true;
-                    Limiter.restrictedBoostsLimit[1] = true;
+                    Limiter.RestrictedBoostsLimit[0] = true;
+                    Limiter.RestrictedBoostsLimit[1] = true;
                     character.proficiencies = new Proficiencies
                     {
                         Perception = 2,
