@@ -2,7 +2,7 @@
 
 namespace Pathfinder2E
 {
-    public class CharacterSheet
+    public class ActorCharacterSheet
     {
         private int CharacterId;
         public string FirstName { get; set; }
@@ -39,11 +39,15 @@ namespace Pathfinder2E
         public Dictionary<DamageType, int> Resistances { get; set; } = new Dictionary<DamageType, int>();
         public Dictionary<DamageType, int> Weaknesess { get; set; } = new Dictionary<DamageType, int>();
 
-
-
-        public CharacterSheet(int characterId)
+        public ActorCharacterSheet()
         {
-            CharacterSheetDbContext context = new CharacterSheetDbContext();
+
+        }
+
+
+        public ActorCharacterSheet(int characterId)
+        {
+            CharacterSheetModelDbContext context = new CharacterSheetModelDbContext();
             CharacterId = characterId;
             CharacterSheetModel character = context.CharacterSheetModels
                 .First(x => x.CharacterSheetModelId == characterId);

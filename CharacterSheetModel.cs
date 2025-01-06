@@ -6,7 +6,7 @@ namespace Pathfinder2E
 {
     public class CharacterSheetModel
     {
-        public int CharacterSheetId { get; set; }
+        public int CharacterSheetModelId { get; set; }
         public int Level { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
