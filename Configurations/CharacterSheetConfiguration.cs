@@ -12,7 +12,7 @@ namespace Pathfinder2E.Configurations
             builder.HasData(
                   new CharacterSheetModel
                   {
-                      CharacterSheetId = 1,
+                      CharacterSheetModelId = 1,
                       Level = 1,
                       FirstName = "Konjit",
                       LastName = "Munaye",
@@ -44,7 +44,7 @@ namespace Pathfinder2E.Configurations
                   },
                   new CharacterSheetModel
                   {
-                      CharacterSheetId = 2,
+                      CharacterSheetModelId = 2,
                       Level = 1,
                       FirstName = "Kanandi",
                       LastName = "Oladoyinbo",
@@ -76,7 +76,7 @@ namespace Pathfinder2E.Configurations
                   },
                   new CharacterSheetModel
                   {
-                      CharacterSheetId = 3,
+                      CharacterSheetModelId = 3,
                       Level = 1,
                       FirstName = "Cris",
                       LastName = "Marcellus",
@@ -99,7 +99,7 @@ namespace Pathfinder2E.Configurations
                   },
                   new CharacterSheetModel
                   {
-                      CharacterSheetId = 4,
+                      CharacterSheetModelId = 4,
                       Level = 1,
                       FirstName = "Unkown",
                       LastName = "Person",
